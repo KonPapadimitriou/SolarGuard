@@ -3,6 +3,17 @@ from ultralytics import YOLO
 from PIL import Image
 import cv2
 
+# --- ΕΞΑΦΑΝΙΣΗ ΛΟΓΟΤΥΠΩΝ & MENU STREAMLIT ΓΙΑ ΑΣΦΑΛΕΙΑ ---
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+# --------------------------------------------------------
+
 # 1. Τίτλος της σελίδας
 st.title("☀️ SolarGuard: Ανίχνευση Βλαβών")
 
