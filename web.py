@@ -3,24 +3,6 @@ from ultralytics import YOLO
 from PIL import Image
 import cv2
 
-# --- ΕΞΑΦΑΝΙΣΗ ΛΟΓΟΤΥΠΩΝ & MENU STREAMLIT ΓΙΑ ΑΣΦΑΛΕΙΑ ---
-hide_streamlit_style = """
-            <style>
-            /* Εξαφανίζει το κλασικό μενού και το footer */
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            header {visibility: hidden;}
-            
-            /* Εξαφανίζει τα σηματάκια του GitHub και τα links στο Cloud */
-            [data-testid="stToolbar"] {visibility: hidden !important;}
-            [data-testid="stDecoration"] {visibility: hidden !important;}
-            .viewerBadge_container__1QSob {display: none !important;}
-            .viewerBadge_link__1S137 {display: none !important;}
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-# --------------------------------------------------------
-
 # 1. Τίτλος της σελίδας
 st.title("☀️ SolarGuard: Ανίχνευση Βλαβών")
 
