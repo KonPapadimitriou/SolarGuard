@@ -3,6 +3,21 @@ from ultralytics import YOLO
 from PIL import Image
 import cv2
 
+hide_streamlit_style = """
+            <style>
+            /* Κρύβει το κλασικό μενού και το "Made with Streamlit" */
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            
+            /* Κρύβει ΑΠΟΚΛΕΙΣΤΙΚΑ το εικονίδιο του GitHub και το κουμπί Deploy */
+            [data-testid="stToolbar"] {visibility: hidden !important;}
+            .viewerBadge_container__1QSob {display: none !important;}
+            .viewerBadge_link__1S137 {display: none !important;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 # 1. Τίτλος της σελίδας
 st.title("☀️ SolarGuard: Ανίχνευση Βλαβών")
 
